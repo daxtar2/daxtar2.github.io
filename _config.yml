@@ -16,7 +16,7 @@
 title: "Daxtar"
 description: "Personal homepage for daxtar2"
 url: "https://daxtar2.github.io"
-baseurl: "/daxtar2"
+baseurl: "/"
 
 # Build settings
 markdown: kramdown
