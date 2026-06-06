@@ -1,0 +1,54 @@
+primary_name: "Doppel"
+secondary_name: ""
+navbar_name: "Doppel"
+
+positions:
+- name: MSc Student
+- name: The University of Hong Kong
+
+email: "daxtar222@gmail.com"
+github: daxtar2
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    I am an MSc student in Computer Science at HKU.
+  </p>
+  <p>
+    I am currently a Research Intern at Alibaba Cloud, focusing on AI security and cloud security.
+  </p>
+  <p>
+    My research interests include LLM adversarial attacks, AI agent attack and defense, and web security.
+  </p>
+
+portrait_url: /assets/images/photos/BH.jpg
+portrait_caption: >-
+  Portrait photo.
+
+education:
+- name: The University of Hong Kong 
+  logo: /assets/images/logos/hku.jpg
+  position: Master's Degree in Computer Science
+  date: 2025 - present
+- name: Sichuan Agricultural University
+  logo: /assets/images/logos/sicau.svg
+  position: Bachelor's Degree in Computer Science and Technology
+  date: 2021 - 2025
+
+experience:
+- name: Alibaba Cloud
+  logo: /assets/images/logos/aliyun.png
+  position: Research Intern, AI Security and Cloud Security
+  date: Present
+- name: Moonshot AI
+  logo: /assets/images/logos/moonshotai.png
+  position: Intern on LLM security & content security
+  date: Previous
+- name: Tencent Cloud
+  logo: /assets/images/logos/tencentcloud.png
+  position: Intern on Cloud Security
+  date: Previous
+- name: RedotPay
+  logo: /assets/images/logos/redotpay.svg
+  position: Intern on Cybersecurity
+  date: Previous
