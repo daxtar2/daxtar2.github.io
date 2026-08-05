@@ -15,5 +15,9 @@ navbar_title: Home
         {% if site.data.display.homepage.show_experience %}
             {% include widgets/experience_card.html %}
         {% endif %}
+
+        {% if site.data.display.homepage.show_selected_publications %}
+            {% include widgets/selected_publications.html %}
+        {% endif %}
     </div>
 </div>

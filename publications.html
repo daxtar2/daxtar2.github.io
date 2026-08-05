@@ -1,0 +1,23 @@
+---
+layout: default
+title: Publications
+navbar_title: Publications
+---
+
+{% assign publications_by_year = site.publications | sort: "year" | reverse | group_by: "year" %}
+
+<div class="row">
+    <div class="col-12 col-lg-10">
+        <h1 class="mb-4">Publications</h1>
+        {% for year in publications_by_year %}
+        <section class="mb-4">
+            <h2 class="h4 mb-3" id="year-{{ year.name }}">{{ year.name }}</h2>
+            <div class="bg-white shadow-sm rounded-xl overflow-hidden">
+                {% for item in year.items %}
+                    {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+</div>

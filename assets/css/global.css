@@ -64,6 +64,29 @@ h1, h2, h3, h4, h5, h6,
     max-height: 120px;
 }
 
+.publication-cover {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background: #fff;
+}
+
+.publication-title {
+    color: #212529;
+    line-height: 1.35;
+}
+
+.publication-venue {
+    color: #555;
+}
+
+@media (min-width: 768px) {
+    .publication-cover {
+        width: 210px;
+        height: 150px;
+    }
+}
+
 .abstract-body {
     min-height: 100px;
 }

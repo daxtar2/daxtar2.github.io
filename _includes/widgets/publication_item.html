@@ -1,0 +1,25 @@
+{% assign item = include.item %}
+<article class="media flex-column flex-md-row p-3 p-md-4 {% unless include.hide_bottom_border %}border-bottom{% endunless %}">
+    {% if item.cover %}
+    <img class="publication-cover rounded mb-3 mb-md-0 mr-md-4" src="{{ item.cover | relative_url }}" alt="Overview figure for {{ item.title }}">
+    {% endif %}
+    <div class="media-body">
+        <h5 class="publication-title mb-2">{{ item.title }}</h5>
+        {% if item.authors %}
+        <div class="mb-2">{{ item.authors }}</div>
+        {% endif %}
+        <div class="publication-venue mb-2">
+            <strong>{{ item.venue }}</strong>
+            {% if item.status %}
+            <span class="badge badge-warning badge-publication ml-1">{{ item.status }}</span>
+            {% endif %}
+        </div>
+        {% if item.links %}
+        <div>
+            {% for link in item.links %}
+            <a class="btn btn-sm btn-outline-primary mr-1" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</article>
