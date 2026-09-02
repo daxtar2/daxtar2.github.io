@@ -5,6 +5,7 @@ date: 2025-06-01 00:00:00 +0800
 author: Doppel
 lang: zh-CN
 permalink: /blog/xss-to-account-takeover-via-llm/
+cover: /assets/images/blog/xss-to-account-takeover/cover.jpg
 excerpt_text: "模型负责写 HTML，分享页负责执行。打开链接的人，负责丢账号。"
 tldr: "讯飞星火 Chatbox 存在存储型 XSS。用 prompt 让模型在嵌套列表里写出 HTML 实体，分享对话后，已登录用户打开链接就会把会话 Cookie 送到攻击者服务器。"
 tags:

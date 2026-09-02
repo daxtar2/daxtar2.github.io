@@ -248,6 +248,7 @@ body.is-blog {
     height: auto;
     border: 1px solid #ebe7e1;
     border-radius: 0.35rem;
+    background: #161412;
 }
 
 .blog-tldr {
