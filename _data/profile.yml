@@ -1,6 +1,6 @@
-primary_name: "Doppel"
+primary_name: "Chen Qiyang"
 secondary_name: ""
-navbar_name: "Doppel"
+navbar_name: "Chen Qiyang"
 
 positions:
 - name: MSc Student
@@ -18,7 +18,7 @@ short_bio: >-
     I am currently a Research Intern at Alibaba Cloud, focusing on AI security and cloud security.
   </p>
   <p>
-    My research interests include LLM adversarial attacks, AI agent attack and defense, and web security.
+    My research interests include agent attack and defense, evaluation, and Guard.
   </p>
 
 portrait_url: /assets/images/photos/BH.jpg

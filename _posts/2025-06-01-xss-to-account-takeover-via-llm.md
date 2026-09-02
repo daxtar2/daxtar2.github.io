@@ -2,7 +2,7 @@
 layout: post
 title: "XSS to Account Takeover via an LLM Chatbox"
 date: 2025-06-01 00:00:00 +0800
-author: Doppel
+author: Chen Qiyang
 lang: zh-CN
 permalink: /blog/xss-to-account-takeover-via-llm/
 cover: /assets/images/blog/xss-to-account-takeover/cover.jpg
