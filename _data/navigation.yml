@@ -3,3 +3,5 @@ pages:
   url: /
 - name: Publications
   url: /publications.html
+- name: Blog
+  url: /blog.html

@@ -119,3 +119,64 @@ div.lazy {
 .email-text {
     font-family: Source Code Pro, monospace;
 }
+
+.blog-card-cover {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.blog-post {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-post-cover {
+    width: 100%;
+    max-height: 460px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.blog-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.blog-content h2 {
+    margin-top: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.blog-content h3 {
+    margin-top: 1.8rem;
+}
+
+.blog-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.25rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+.blog-content pre {
+    overflow-x: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #20242a;
+    color: #f8f9fa;
+}
+
+.blog-content code {
+    word-break: break-word;
+}
+
+.blog-content blockquote {
+    padding: 0.8rem 1rem;
+    border-left: 4px solid #6c757d;
+    background: #f4f5f6;
+    color: #495057;
+}

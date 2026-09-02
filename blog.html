@@ -1,0 +1,43 @@
+---
+layout: default
+title: Blog
+navbar_title: Blog
+---
+
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">Blog</h1>
+    </div>
+</div>
+
+<div class="row">
+    {% for post in site.posts %}
+    <div class="col-12 col-lg-6 mb-4">
+        <article class="card h-100 border-0 shadow-sm bg-white overflow-hidden">
+            {% if post.cover %}
+            <a href="{{ post.url | relative_url }}">
+                <img class="blog-card-cover" src="{{ post.cover | relative_url }}" alt="Cover image for {{ post.title }}">
+            </a>
+            {% endif %}
+            <div class="card-body p-4">
+                <div class="small text-muted mb-2">
+                    {% if post.author %}{{ post.author }} &middot; {% endif %}{% if post.lang == "zh-CN" %}{{ post.date | date: "%Y 年 %-m 月" }}{% else %}{{ post.date | date: "%B %Y" }}{% endif %}
+                </div>
+                <h2 class="h4 mb-2">
+                    <a class="text-dark" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
+                {% if post.excerpt_text %}
+                <p class="text-muted mb-3">{{ post.excerpt_text }}</p>
+                {% endif %}
+                {% if post.tags %}
+                <div>
+                    {% for tag in post.tags %}
+                    <span class="badge badge-light border mr-1">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </article>
+    </div>
+    {% endfor %}
+</div>
