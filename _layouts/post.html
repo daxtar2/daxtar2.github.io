@@ -1,34 +1,45 @@
 ---
 layout: default
+body_class: is-blog
+container_class: container-md
 ---
 
-<article class="blog-post card border-0 shadow-sm bg-white overflow-hidden">
+<article class="blog-article">
+    <header class="blog-header">
+        <p class="blog-meta">
+            {% if page.lang == "zh-CN" %}{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}{% else %}{{ page.date | date: "%b %d, %Y" }}{% endif %}{% if page.author %} &middot; {{ page.author }}{% endif %}
+        </p>
+        <h1 class="blog-title">{{ page.title }}</h1>
+        {% if page.excerpt_text %}
+        <p class="blog-dek">{{ page.excerpt_text }}</p>
+        {% endif %}
+        {% if page.tags %}
+        <p class="blog-tags">
+            {% for tag in page.tags %}
+            <span>#{{ tag | downcase | replace: " ", "-" }}</span>
+            {% endfor %}
+        </p>
+        {% endif %}
+    </header>
+
     {% if page.cover %}
-    <img class="blog-post-cover" src="{{ page.cover | relative_url }}" alt="Cover image for {{ page.title }}">
+    <figure class="blog-cover">
+        <img src="{{ page.cover | relative_url }}" alt="Cover image for {{ page.title }}">
+    </figure>
     {% endif %}
-    <div class="card-body p-4 p-md-5">
-        <header class="mb-4">
-            <div class="small text-muted mb-2">
-                {% if page.author %}{{ page.author }} &middot; {% endif %}{% if page.lang == "zh-CN" %}{{ page.date | date: "%Y 年 %-m 月" }}{% else %}{{ page.date | date: "%B %Y" }}{% endif %}
-            </div>
-            <h1>{{ page.title }}</h1>
-            {% if page.excerpt_text %}
-            <p class="lead text-muted">{{ page.excerpt_text }}</p>
-            {% endif %}
-            {% if page.tags %}
-            <div>
-                {% for tag in page.tags %}
-                <span class="badge badge-light border mr-1">{{ tag }}</span>
-                {% endfor %}
-            </div>
-            {% endif %}
-        </header>
-        <div class="blog-content">
-            {{ content }}
-        </div>
+
+    {% if page.tldr %}
+    <aside class="blog-tldr">
+        <strong>TL;DR</strong>
+        <p>{{ page.tldr }}</p>
+    </aside>
+    {% endif %}
+
+    <div class="blog-content">
+        {{ content }}
     </div>
 </article>
 
-<div class="blog-post my-4">
-    <a href="{{ '/blog/' | relative_url }}">&larr; Back to Blog</a>
-</div>
+<p class="blog-back">
+    <a href="{{ '/blog/' | relative_url }}">&larr; Blog</a>
+</p>

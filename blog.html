@@ -3,42 +3,26 @@ layout: default
 title: Blog
 navbar_title: Blog
 permalink: /blog/
+body_class: is-blog
+container_class: container-md
 ---
 
-<div class="row">
-    <div class="col-12">
-        <h1 class="mb-4">Blog</h1>
-    </div>
-</div>
+<div class="blog-index-page">
+    <h1 class="blog-index-title">Blog</h1>
+    <p class="blog-index-intro">Notes on AI security, web bugs, and things that happen when models start writing HTML.</p>
 
-<div class="row">
-    {% for post in site.posts %}
-    <div class="col-12 col-lg-6 mb-4">
-        <article class="card h-100 border-0 shadow-sm bg-white overflow-hidden">
-            {% if post.cover %}
-            <a href="{{ post.url | relative_url }}">
-                <img class="blog-card-cover" src="{{ post.cover | relative_url }}" alt="Cover image for {{ post.title }}">
-            </a>
-            {% endif %}
-            <div class="card-body p-4">
-                <div class="small text-muted mb-2">
-                    {% if post.author %}{{ post.author }} &middot; {% endif %}{% if post.lang == "zh-CN" %}{{ post.date | date: "%Y 年 %-m 月" }}{% else %}{{ post.date | date: "%B %Y" }}{% endif %}
-                </div>
-                <h2 class="h4 mb-2">
-                    <a class="text-dark" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                </h2>
-                {% if post.excerpt_text %}
-                <p class="text-muted mb-3">{{ post.excerpt_text }}</p>
-                {% endif %}
-                {% if post.tags %}
-                <div>
-                    {% for tag in post.tags %}
-                    <span class="badge badge-light border mr-1">{{ tag }}</span>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-        </article>
-    </div>
+    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year in posts_by_year %}
+    <section class="blog-year">
+        <h2>{{ year.name }}</h2>
+        <ul class="blog-index-list">
+            {% for post in year.items %}
+            <li>
+                <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %d" }}</time>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
     {% endfor %}
 </div>

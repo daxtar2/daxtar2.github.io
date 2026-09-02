@@ -120,63 +120,310 @@ div.lazy {
     font-family: Source Code Pro, monospace;
 }
 
-.blog-card-cover {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    object-position: top;
+/* Blog */
+
+.is-blog .navbar,
+.is-blog .footer {
+    background-color: rgba(252, 251, 249, 0.78) !important;
 }
 
-.blog-post {
-    max-width: 900px;
-    margin: 0 auto;
+body.is-blog {
+    background: #fcfbf9 !important;
+    color: #1c1917;
 }
 
-.blog-post-cover {
+.blog-index-page,
+.blog-article,
+.blog-back {
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-index-title {
+    font-family: "Fira Sans", "Lato", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+}
+
+.blog-index-intro {
+    color: #57534e;
+    margin-bottom: 2.5rem;
+}
+
+.blog-year {
+    margin-bottom: 2.25rem;
+}
+
+.blog-year h2 {
+    font-family: "Fira Sans", "Lato", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #9b1c1c;
+    margin-bottom: 0.85rem;
+}
+
+.blog-index-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-index-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid #ebe7e1;
+}
+
+.blog-index-list li:last-child {
+    border-bottom: 0;
+}
+
+.blog-index-list time {
+    flex: 0 0 4.25rem;
+    color: #78716c;
+    font-size: 0.92rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.blog-index-list a {
+    color: #1c1917;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.blog-index-list a:hover {
+    color: #9b1c1c;
+    text-decoration: none;
+}
+
+.blog-header {
+    margin-bottom: 1.75rem;
+}
+
+.blog-meta {
+    color: #78716c;
+    font-size: 0.92rem;
+    margin-bottom: 0.75rem;
+}
+
+.blog-title {
+    font-family: "Fira Sans", "Lato", sans-serif;
+    font-size: clamp(1.85rem, 3vw, 2.35rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: 0.85rem;
+}
+
+.blog-dek {
+    font-size: 1.12rem;
+    line-height: 1.65;
+    color: #44403c;
+    margin-bottom: 0.9rem;
+}
+
+.blog-tags {
+    margin: 0;
+    color: #9b1c1c;
+    font-size: 0.88rem;
+    letter-spacing: 0.01em;
+}
+
+.blog-tags span {
+    margin-right: 0.65rem;
+}
+
+.blog-cover {
+    margin: 0 0 1.75rem;
+}
+
+.blog-cover img {
+    display: block;
     width: 100%;
-    max-height: 460px;
-    object-fit: cover;
-    object-position: top;
+    height: auto;
+    border: 1px solid #ebe7e1;
+    border-radius: 0.35rem;
+}
+
+.blog-tldr {
+    margin: 0 0 2rem;
+    padding: 1rem 1.1rem;
+    border-left: 3px solid #9b1c1c;
+    background: #f6f1ec;
+}
+
+.blog-tldr strong {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: #9b1c1c;
+    margin-bottom: 0.35rem;
+}
+
+.blog-tldr p {
+    margin: 0;
+    color: #292524;
+    line-height: 1.65;
 }
 
 .blog-content {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     line-height: 1.8;
+    color: #292524;
+}
+
+.blog-content > p {
+    margin-bottom: 1.15rem;
 }
 
 .blog-content h2 {
+    font-family: "Fira Sans", "Lato", sans-serif;
+    font-size: 1.28rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     margin-top: 2.4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
 }
 
 .blog-content h3 {
+    font-family: "Fira Sans", "Lato", sans-serif;
+    font-size: 1.08rem;
+    font-weight: 700;
     margin-top: 1.8rem;
+    margin-bottom: 0.7rem;
+}
+
+.blog-content a {
+    color: #9b1c1c;
+}
+
+.blog-content ul,
+.blog-content ol {
+    padding-left: 1.25rem;
+    margin-bottom: 1.2rem;
+}
+
+.blog-content li {
+    margin-bottom: 0.4rem;
 }
 
 .blog-content img {
     display: block;
     max-width: 100%;
     height: auto;
-    margin: 1.25rem auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+.blog-figure,
+.blog-content figure {
+    margin: 1.6rem 0 1.8rem;
+}
+
+.blog-figure img,
+.blog-content figure img {
+    width: 100%;
+    border: 1px solid #ebe7e1;
+    border-radius: 0.35rem;
+    background: #fff;
+}
+
+.blog-figure figcaption,
+.blog-content figcaption {
+    margin-top: 0.55rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #78716c;
 }
 
 .blog-content pre {
     overflow-x: auto;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background: #20242a;
-    color: #f8f9fa;
+    padding: 1rem 1.1rem;
+    margin: 1.2rem 0 1.5rem;
+    border-radius: 0.35rem;
+    background: #1c1917;
+    color: #f5f5f4;
+    font-size: 0.86rem;
+    line-height: 1.6;
 }
 
 .blog-content code {
+    font-family: "Source Code Pro", ui-monospace, monospace;
+    font-size: 0.86em;
     word-break: break-word;
 }
 
+.blog-content p code,
+.blog-content li code {
+    padding: 0.1em 0.35em;
+    border-radius: 0.2rem;
+    background: #f3eee8;
+    color: #9b1c1c;
+}
+
+.blog-content pre code {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font-size: 0.86rem;
+    word-break: normal;
+}
+
 .blog-content blockquote {
-    padding: 0.8rem 1rem;
-    border-left: 4px solid #6c757d;
-    background: #f4f5f6;
-    color: #495057;
+    margin: 1.3rem 0;
+    padding: 0.2rem 0 0.2rem 1rem;
+    border-left: 3px solid #d6d3d1;
+    color: #57534e;
+}
+
+.blog-chain {
+    list-style: none;
+    padding: 0;
+    margin: 1.3rem 0 1.6rem;
+    border-top: 1px solid #ebe7e1;
+}
+
+.blog-chain li {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.7rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #ebe7e1;
+    margin: 0;
+}
+
+.blog-chain span {
+    font-family: "Source Code Pro", ui-monospace, monospace;
+    font-size: 0.82rem;
+    color: #9b1c1c;
+    padding-top: 0.12rem;
+}
+
+.blog-back {
+    margin: 2.75rem auto 0;
+}
+
+.blog-back a {
+    color: #78716c;
+}
+
+.blog-back a:hover {
+    color: #9b1c1c;
+    text-decoration: none;
+}
+
+@media (max-width: 575.98px) {
+    .blog-index-list li {
+        flex-direction: column;
+        gap: 0.15rem;
+        padding: 0.7rem 0;
+    }
+
+    .blog-index-list time {
+        flex: none;
+        font-size: 0.8rem;
+    }
 }
