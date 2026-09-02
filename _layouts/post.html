@@ -5,6 +5,12 @@ container_class: container-md
 ---
 
 <article class="blog-article">
+    {% if page.cover %}
+    <figure class="blog-cover">
+        <img src="{{ page.cover | relative_url }}" alt="Cover image for {{ page.title }}" width="1376" height="768">
+    </figure>
+    {% endif %}
+
     <header class="blog-header">
         <p class="blog-meta">
             {% if page.lang == "zh-CN" %}{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}{% else %}{{ page.date | date: "%b %d, %Y" }}{% endif %}{% if page.author %} &middot; {{ page.author }}{% endif %}
@@ -21,12 +27,6 @@ container_class: container-md
         </p>
         {% endif %}
     </header>
-
-    {% if page.cover %}
-    <figure class="blog-cover">
-        <img src="{{ page.cover | relative_url }}" alt="Cover image for {{ page.title }}">
-    </figure>
-    {% endif %}
 
     {% if page.tldr %}
     <aside class="blog-tldr">
