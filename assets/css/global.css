@@ -111,6 +111,11 @@ div.lazy {
     font-size: 100%;
 }
 
+.publication-arxiv-badge {
+    height: 20px;
+    vertical-align: middle;
+}
+
 .email-text {
     font-family: Source Code Pro, monospace;
 }

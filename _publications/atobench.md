@@ -4,5 +4,6 @@ year: 2026
 venue: "AAAI 2027"
 status: "Under Review"
 cover: /assets/images/publications/atobench.png
+arxiv: "2608.12996"
 selected: true
 ---

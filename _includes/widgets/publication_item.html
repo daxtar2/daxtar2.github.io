@@ -14,6 +14,13 @@
             <span class="badge badge-warning badge-publication ml-1">{{ item.status }}</span>
             {% endif %}
         </div>
+        {% if item.arxiv %}
+        <div class="mb-2">
+            <a href="https://arxiv.org/pdf/{{ item.arxiv }}" target="_blank" rel="noopener noreferrer">
+                <img class="publication-arxiv-badge" src="https://img.shields.io/badge/arXiv-{{ item.arxiv }}-b31b1b.svg" alt="arXiv {{ item.arxiv }}">
+            </a>
+        </div>
+        {% endif %}
         {% if item.links %}
         <div>
             {% for link in item.links %}
