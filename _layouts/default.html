@@ -20,6 +20,7 @@
             try {
                 if (localStorage.getItem('theme') === 'dark') {
                     document.documentElement.classList.add('theme-dark');
+                    document.write('<style>.profile-portrait,.profile-portrait-row{display:none!important}</style>');
                 }
             } catch (e) {}
         })();

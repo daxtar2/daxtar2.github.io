@@ -54,6 +54,8 @@ $(function () {
     function applyTheme(theme) {
         var dark = theme === 'dark';
         document.documentElement.classList.toggle('theme-dark', dark);
+        document.body.classList.toggle('theme-dark', dark);
+        $('.profile-portrait, .profile-portrait-row').prop('hidden', dark);
         if ($themeToggle.length) {
             $themeToggle.attr({
                 'aria-pressed': dark ? 'true' : 'false',

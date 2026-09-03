@@ -491,7 +491,25 @@ html.theme-dark .theme-toggle .theme-icon-sun {
     display: inline-block;
 }
 
-html.theme-dark .profile-portrait {
+html.theme-dark .profile-portrait,
+html.theme-dark .profile-portrait-row,
+body.theme-dark .profile-portrait,
+body.theme-dark .profile-portrait-row,
+html.theme-dark .profile-card .figure,
+html.theme-dark .profile-card .figure-img,
+html.theme-dark .profile-card img[alt="Portrait"],
+html.theme-dark [hidden].profile-portrait,
+html.theme-dark [hidden].profile-portrait-row {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+[hidden].profile-portrait,
+[hidden].profile-portrait-row {
     display: none !important;
 }
 
