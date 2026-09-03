@@ -39,4 +39,36 @@ $(function () {
     $(".lazy").on("load", function () {
         $grid.masonry('layout');
     });
+
+    var themeKey = 'theme';
+    var $themeToggle = $('.theme-toggle');
+
+    function currentTheme() {
+        try {
+            return localStorage.getItem(themeKey) === 'dark' ? 'dark' : 'light';
+        } catch (e) {
+            return 'light';
+        }
+    }
+
+    function applyTheme(theme) {
+        var dark = theme === 'dark';
+        document.documentElement.classList.toggle('theme-dark', dark);
+        if ($themeToggle.length) {
+            $themeToggle.attr({
+                'aria-pressed': dark ? 'true' : 'false',
+                'aria-label': dark ? 'Switch to light mode' : 'Switch to dark mode',
+                title: dark ? 'Return to day' : 'Enter the night'
+            });
+        }
+    }
+
+    applyTheme(currentTheme());
+    $themeToggle.on('click', function () {
+        var next = currentTheme() === 'dark' ? 'light' : 'dark';
+        try {
+            localStorage.setItem(themeKey, next);
+        } catch (e) {}
+        applyTheme(next);
+    });
 })
