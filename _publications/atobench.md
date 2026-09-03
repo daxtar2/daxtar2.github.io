@@ -6,4 +6,5 @@ status: "Under Review"
 cover: /assets/images/publications/atobench.png
 arxiv: "2608.12996"
 selected: true
+authors: '<span class="me">Qiyang Chen</span>, Yixi Li, Fengwei Zhang, Junlin Liu'
 ---
