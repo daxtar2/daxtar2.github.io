@@ -58,7 +58,7 @@ $(function () {
             $themeToggle.attr({
                 'aria-pressed': dark ? 'true' : 'false',
                 'aria-label': dark ? 'Switch to light mode' : 'Switch to dark mode',
-                title: dark ? 'Return to day' : 'Enter the night'
+                title: dark ? 'Switch to light mode' : 'Switch to dark mode'
             });
         }
     }

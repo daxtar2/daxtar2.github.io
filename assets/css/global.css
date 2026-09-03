@@ -442,53 +442,57 @@ body.is-blog {
     }
 }
 
-/* Theme toggle: the glowing figure as a portal */
+/* Theme toggle */
 
 .theme-toggle {
-    position: fixed;
-    right: 1.35rem;
-    bottom: 1.35rem;
-    z-index: 1080;
-    width: 54px;
-    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    margin-left: 0.35rem;
     padding: 0;
     border: 0;
-    border-radius: 50%;
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    line-height: 1;
     cursor: pointer;
-    overflow: hidden;
-    background-color: #050505;
-    background-image: url('../images/photos/BlackSky.jpg');
-    background-repeat: no-repeat;
-    background-size: 420%;
-    background-position: 98% 48%;
-    box-shadow:
-        0 0 0 2px #111,
-        0 0 0 3px rgba(255, 255, 255, 0.88),
-        0 0 22px 6px rgba(255, 255, 255, 0.42);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background-image 0.35s ease;
 }
 
 .theme-toggle:hover,
 .theme-toggle:focus {
     outline: none;
-    transform: scale(1.07);
+    color: #212529;
 }
 
 .theme-toggle:focus-visible {
-    box-shadow:
-        0 0 0 2px #111,
-        0 0 0 4px #fff,
-        0 0 22px 6px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 2px rgba(33, 37, 41, 0.25);
+}
+
+.theme-toggle .theme-icon-sun {
+    display: none;
 }
 
 html.theme-dark .theme-toggle {
-    background-image: url('../images/photos/BH.jpg');
-    background-size: cover;
-    background-position: center;
-    box-shadow:
-        0 0 0 2px rgba(255, 255, 255, 0.18),
-        0 0 0 3px rgba(255, 255, 255, 0.7),
-        0 0 26px 7px rgba(255, 255, 255, 0.28);
+    color: #f4f2ef;
+}
+
+html.theme-dark .theme-toggle:hover,
+html.theme-dark .theme-toggle:focus {
+    color: #fff;
+}
+
+html.theme-dark .theme-toggle .theme-icon-moon {
+    display: none;
+}
+
+html.theme-dark .theme-toggle .theme-icon-sun {
+    display: inline-block;
+}
+
+html.theme-dark .profile-portrait {
+    display: none !important;
 }
 
 /* Dark mode */
